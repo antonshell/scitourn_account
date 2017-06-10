@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="seen">
+            {{ message }}
+            <button v-on:click="reverseMessage">Reverse Message</button>
+
+            <input v-model="message">
+        </div>
+
+        <ol>
+            <!-- Create an instance of the todo-item component -->
+            <todo-item></todo-item>
+        </ol>
+
+    </div>
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <!--<script src="node_modules/vue-router/dist/vue-router.js"></script>-->
+
+    <script type="text/javascript">
+
+
+        console.log( window.location.pathname);
+
+        //const mainRoute = 'account';
+        const mainRoute = '/scitourn_account';
+        //const mainRoute = '';
+
+        // routes
+        const NotFound = { template: '<p>Page not found</p>' }
+        const Home = { template: '<p>home page</p>' }
+
+        const Login = { template: '<p>Login</p>' }
+        const Register = { template: '<p>Register</p>' }
+        const ForgetPassword = { template: '<p>Forget password</p>' }
+
+        const Dashboard = { template: '<p>Dashboard</p>' }
+        const Tournaments = { template: '<p>Tournaments</p>' }
+        const Teams = { template: '<p>My teams</p>' }
+        const Profile = { template: '<p>Profile</p>' }
+
+        /*const routes = {
+            [mainRoute + '/']: Home,
+            [mainRoute + '/login']: Login,
+            [mainRoute + '/register']: Register,
+            [mainRoute + '/forget-password']: ForgetPassword,
+
+            [mainRoute + '/dashboard']: Dashboard,
+            [mainRoute + '/tournaments']: Tournaments,
+            [mainRoute + '/teams']: Teams,
+            [mainRoute + '/profile']: Profile,
+
+
+        };*/
+
+        const openRoutes = {
+            [mainRoute + '/login']: Login,
+            [mainRoute + '/register']: Register,
+            [mainRoute + '/forget-password']: ForgetPassword,
+        };
+
+        const protectedRoutes = {
+            [mainRoute + '/']: Home,
+            [mainRoute + '/dashboard']: Dashboard,
+            [mainRoute + '/tournaments']: Tournaments,
+            [mainRoute + '/teams']: Teams,
+            [mainRoute + '/profile']: Profile,
+
+
+        };
+
+        // sample component
+        Vue.component('todo-item', {
+            template: '<li>This is a todo</li>'
+        });
+
+
+
+        // vue app instance
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue! 111',
+                seen: true,
+
+                currentRoute: window.location.pathname
+                //message: 'You loaded this page on ' + new Date()
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            },
+            computed: {
+                ViewComponent () {
+
+                    var authorized = false;
+                    var currentRoute = this.currentRoute;
+
+
+
+                    if(authorized){
+                        return protectedRoutes[currentRoute] || NotFound;
+                    }
+                    else{
+                        return openRoutes[currentRoute] || Login;
+                    }
+
+                    /*var routes = authorized ? protectedRoutes : openRoutes;
+                    return routes[currentRoute] || NotFound;*/
+                }
+            },
+            render (h) { return h(this.ViewComponent) }
+        });
+
+
+    </script>
+
+</body>
+</html>
