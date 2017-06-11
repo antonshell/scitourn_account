@@ -11,8 +11,6 @@ import Profile from './../components/protected/Profile.vue'
 
 import auth from './../auth'
 
-const mainRoute = '/scitourn_account';
-
 function requireAuth (to, from, next) {
     if(!auth.loggedIn()){
         next({

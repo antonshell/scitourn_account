@@ -5,8 +5,15 @@
 </template>
 
 <script>
+
+//var themes = require('./../../themes/index.js');
+//import themes from './../../themes/index.js';
+import themeMixin from './../../mixins/theme'
+
 export default {
+  mixins: [themeMixin],
   name: 'forget-password',
+  template: require('./../../themes/classic/open/ForgetPassword.html'),
   data () {
     return {
       msg: 'Forget Password'

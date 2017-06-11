@@ -5,7 +5,6 @@
 // example from here:
 // https://github.com/vuejs/vue-router/blob/dev/examples/auth-flow/auth.js
 
-
 export default {
     login (email, pass, cb) {
         cb = arguments[arguments.length - 1]
@@ -37,8 +36,8 @@ export default {
     },
 
     loggedIn () {
-        return true;
-        //return false;
+        //return true;
+        return false;
 
         return !!localStorage.token
     },

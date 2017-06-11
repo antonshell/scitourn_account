@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry: './src/app.js',
@@ -25,10 +25,14 @@ module.exports = {
                 query: {
                     name: '[name].[ext]?[hash]'
                 }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
             }
         ]
     }
-}
+};
 
 /*
 if (process.env.NODE_ENV === 'production') {

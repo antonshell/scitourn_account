@@ -5,9 +5,7 @@
 //import Vue from 'vue'
 //import App from './App'
 import router from './router'
-
-//import router from './router.js'
-
+import themeMixin from './mixins/theme'
 
 // sample component
 Vue.component('todo-item', {
@@ -16,13 +14,13 @@ Vue.component('todo-item', {
 
 // vue app instance
 var app = new Vue({
+    mixins: [themeMixin],
     el: '#app',
     data: {
         message: 'Hello Vue! 111',
         seen: true,
 
         currentRoute: window.location.pathname
-        //message: 'You loaded this page on ' + new Date()
     },
     methods: {
         reverseMessage: function () {
@@ -31,3 +29,5 @@ var app = new Vue({
     },
     router,
 });
+
+console.log(app.getTheme());
