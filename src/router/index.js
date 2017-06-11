@@ -53,7 +53,8 @@ const routes = [
     { path: '/forget-password', component: ForgetPassword, beforeEnter: authorizedRedirect },
 
     // auth required
-    { path: '/', component: Home, beforeEnter: requireAuth },
+    //{ path: '/', component: Home, beforeEnter: requireAuth },
+    { path: '/', redirect: '/tournaments', beforeEnter: requireAuth },
     { path: '/dashboard', component: Dashboard, beforeEnter: requireAuth },
     { path: '/tournaments', component: Tournaments, beforeEnter: requireAuth },
     { path: '/teams', component: Teams, beforeEnter: requireAuth },

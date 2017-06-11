@@ -36,8 +36,8 @@ export default {
     },
 
     loggedIn () {
-        //return true;
-        return false;
+        return true;
+        //return false;
 
         return !!localStorage.token
     },

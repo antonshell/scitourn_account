@@ -1,0 +1,31 @@
+/* header */
+.header-wrapper{
+    display:inline-block;
+    clear: left;
+    margin-bottom:13px;
+    margin-right: 20px;
+}
+
+.logo-wrapper{
+    float:left;
+}
+
+.logotitle{
+    float:left;
+}
+
+/* banners */
+.banners-wrapper{
+    clear:left;
+    padding-top:0px;
+}
+
+.banners-table{
+    text-align:center;
+    margin-top:0px;
+}
+
+.banner-empty{
+    width: 150px;
+    padding: 5px;
+}
