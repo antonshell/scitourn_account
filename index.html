@@ -6,22 +6,43 @@
 </head>
 <body>
     <div id="app">
-        <div v-if="seen">
-            {{ message }}
+        <div>
+            <!--{{ message }}
             <button v-on:click="reverseMessage">Reverse Message</button>
 
-            <input v-model="message">
+            <input v-model="message">-->
+
+            <p>
+                <router-link to="/login">login</router-link>
+                <router-link to="/register">register</router-link>
+                <router-link to="/forget-password">forget-password</router-link>
+            </p>
+
+            <p>
+                <router-link to="/">Home</router-link>
+                <router-link to="/dashboard">dashboard</router-link>
+                <router-link to="/tournaments">tournaments</router-link>
+                <router-link to="/teams">teams</router-link>
+                <router-link to="/profile">profile</router-link>
+            </p>
+
+            <!--<router-view></router-view>-->
+
+            <transition>
+                <router-view></router-view>
+            </transition>
+
         </div>
 
-        <ol>
-            <!-- Create an instance of the todo-item component -->
+        <!--<ol>
             <todo-item></todo-item>
-        </ol>
+        </ol>-->
 
     </div>
 
     <script src="node_modules/vue/dist/vue.js"></script>
-    <!--<script src="node_modules/vue-router/dist/vue-router.js"></script>-->
+    <script src="node_modules/vue-router/dist/vue-router.js"></script>
+    <!--<script src="node_modules/vue-resource/dist/vue-resource.js"></script>-->
 
     <script type="text/javascript">
 
@@ -75,11 +96,116 @@
 
         };
 
+
+        // vue router
+        /*const routes = [
+            { path: mainRoute + '/', component: Home },
+            { path: mainRoute + '/dashboard', component: Dashboard },
+            { path: mainRoute + '/tournaments', component: Tournaments },
+            { path: mainRoute + '/teams', component: Teams },
+            { path: mainRoute + '/profile', component: Profile },
+
+            { path: mainRoute + '/login', component: Login },
+            { path: mainRoute + '/register', component: Register },
+            { path: mainRoute + '/forget-password', component: ForgetPassword },
+        ];*/
+
+        const Foo = { template: '<div>foo</div>' };
+        const Bar = { template: '<div>bar</div>' };
+
+        /*const routes = [
+            { path: '/foo', component: Foo },
+            { path: '/bar', component: Bar }
+        ];*/
+
+        var authorized = false;
+
+        function requireAuth (to, from, next) {
+
+
+            if(!authorized){
+                next({
+                    path: '/login',
+                    //query: { redirect: to.fullPath }
+                })
+            }
+            else{
+                next()
+            }
+
+            /*if (!auth.loggedIn()) {
+                next({
+                    path: '/login',
+                    query: { redirect: to.fullPath }
+                })
+            } else {
+                next()
+            }*/
+        }
+
+        function authorizedRedirect(to, from, next) {
+            if(authorized){
+                next({
+                    path: '/',
+                    //query: { redirect: to.fullPath }
+                })
+            }
+            else{
+                next()
+            }
+        }
+
+        const routes = [
+
+            { path: '/login', component: Login, beforeEnter: authorizedRedirect },
+            { path: '/register', component: Register, beforeEnter: authorizedRedirect },
+            { path: '/forget-password', component: ForgetPassword, beforeEnter: authorizedRedirect },
+
+            { path: '/', component: Home, beforeEnter: requireAuth },
+            { path: '/dashboard', component: Dashboard, beforeEnter: requireAuth },
+            { path: '/tournaments', component: Tournaments, beforeEnter: requireAuth },
+            { path: '/teams', component: Teams, beforeEnter: requireAuth },
+            { path: '/profile', component: Profile, beforeEnter: requireAuth },
+        ];
+
+        const router = new VueRouter({
+            routes // short for routes: routes
+        });
+
+        /*router.beforeEach((transition)=>{
+
+            console.log('router beforeEach');
+
+            /!*if(transition.to.auth){
+                if(!transition.to.router.app.$store.state.auth.authorized){
+                    transition.abort()
+                    router.go({path:"/"})
+                }
+            }
+            transition.next()*!/
+
+            transition.next();
+
+
+
+        });*/
+
+        /*router.beforeEach(function(transition) {
+            //checkUserIsLogin
+            console.log('router beforeEach');
+            transition.next()
+        });*/
+
+
+
         // sample component
         Vue.component('todo-item', {
             template: '<li>This is a todo</li>'
         });
 
+        /*const app = new Vue({
+            router
+        }).$mount('#app');*/
 
 
         // vue app instance
@@ -97,7 +223,7 @@
                     this.message = this.message.split('').reverse().join('')
                 }
             },
-            computed: {
+            /*computed: {
                 ViewComponent () {
 
                     var authorized = false;
@@ -111,13 +237,32 @@
                     else{
                         return openRoutes[currentRoute] || Login;
                     }
-
-                    /*var routes = authorized ? protectedRoutes : openRoutes;
-                    return routes[currentRoute] || NotFound;*/
                 }
-            },
-            render (h) { return h(this.ViewComponent) }
+            },*/
+            router,
+            //render (h) { return h(this.ViewComponent) }
         });
+
+        //Vue.http.interceptors.push({
+        /*Vue.http.interceptors.push({
+
+            request: function (request){
+
+                console.log('interceptor request');
+
+                //request.headers['Authorization'] = auth.getAuthHeader()
+                return request
+            },
+
+            response: function (response) {
+
+                console.log('interceptor response');
+
+                //console.log('status: ' + response.data)
+                return response;
+            }
+
+        });*/
 
 
     </script>
