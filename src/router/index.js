@@ -1,28 +1,20 @@
-/**
- * Created by antonshell on 11.06.2017.
- */
+import ForgetPassword from './../components/open/ForgetPassword.vue'
+import Login from './../components/open/Login.vue'
+import NotFound from './../components/open/NotFound.vue'
+import Register from './../components/open/Register.vue'
+
+import Home from './../components/protected/Home.vue'
+import Dashboard from './../components/protected/Dashboard.vue'
+import Tournaments from './../components/protected/Tournaments.vue'
+import Teams from './../components/protected/Teams.vue'
+import Profile from './../components/protected/Profile.vue'
+
+import auth from './../auth'
 
 const mainRoute = '/scitourn_account';
 
-// Templates
-const NotFound = { template: '<p>Page not found</p>' }
-const Home = { template: '<p>home page</p>' }
-
-const Login = { template: '<p>Login</p>' }
-const Register = { template: '<p>Register</p>' }
-const ForgetPassword = { template: '<p>Forget password</p>' }
-
-const Dashboard = { template: '<p>Dashboard</p>' }
-const Tournaments = { template: '<p>Tournaments</p>' }
-const Teams = { template: '<p>My teams</p>' }
-const Profile = { template: '<p>Profile</p>' }
-
-var authorized = false;
-
 function requireAuth (to, from, next) {
-
-
-    if(!authorized){
+    if(!auth.loggedIn()){
         next({
             path: '/login',
             //query: { redirect: to.fullPath }
@@ -31,19 +23,10 @@ function requireAuth (to, from, next) {
     else{
         next()
     }
-
-    /*if (!auth.loggedIn()) {
-     next({
-     path: '/login',
-     query: { redirect: to.fullPath }
-     })
-     } else {
-     next()
-     }*/
 }
 
 function authorizedRedirect(to, from, next) {
-    if(authorized){
+    if(auth.loggedIn()){
         next({
             path: '/',
             //query: { redirect: to.fullPath }
@@ -72,3 +55,5 @@ const router = new VueRouter({
     routes, // short for routes: routes
     //mode: 'history', // remove # from url
 });
+
+export default router;
