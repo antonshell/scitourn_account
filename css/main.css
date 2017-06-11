@@ -1,0 +1,164 @@
+@charset "windows-1251";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+/* BODY */
+body{ 
+font-family: Georgia, "Times New Roman", Times, serif  !important;
+font-size:16px  !important;
+background-image: url('http://scitourn.ru/new/handmadepaper.png');
+margin-top:10px;
+margin-bottom:50px;
+}
+a{ 
+color:#339; 
+text-decoration:underline;
+}
+a:hover{
+text-decoration: none;
+}
+.topimg{margin-left: -21px; margin-top: -21px;}
+a:visited{
+	color:#609;
+	text-decoration: none;
+}
+
+#titlehead{
+color: white; 
+font-size: 20px; 
+margin-top: -30px; 
+font-family: 'Open Sans Condensed', sans-serif; 
+text-align: center;
+padding-top: 3px;
+}
+#titleheadback{
+
+width: 842px;background: #001800;
+opacity: 0.7;
+height: 30px;margin-top: -30px; 
+margin-left: -21px;}
+#titleleft{
+color: white; 
+font-size: 16px; 
+margin-top: 5px; 
+font-family: 'Open Sans Condensed', sans-serif; 
+padding: 5px 10px 5px 10px;
+background: #900;
+text-decoration: none;
+font-weight: 300;
+}
+.mini{font-size: 14px; margin-top: 5px; }
+#titlesponsor{
+color: white; 
+font-size: 16px; 
+margin-top: 0px; 
+font-family: 'Open Sans Condensed', sans-serif; 
+padding: 5px 10px 5px 10px;
+font-weight: 300;
+background: #2c2c2c;
+opacity: 0.7;
+margin-bottom: 10px;
+float: left;
+display: block;
+
+}
+.logotitle{
+font-family: 'Open Sans Condensed', sans-serif;
+color: #477948;
+font-size: 21px;
+text-align: left;
+padding-left: 10px;
+padding-top: 27px;
+}
+#telo{
+	padding: 20px;
+	width:800px;
+	border: 1px solid #E6E6E6;
+	background:#FFF;
+	text-align:left;
+	display:inline-block;
+	/*margin-top: 0;*/
+	/*font-family: Georgia, "Times New Roman", Times, serif !important;*/
+	box-shadow: 0 1px 8px gray;
+}
+#top{
+	width:100%;
+	text-align:center;
+	padding-bottom:10px;
+	
+}
+#menu{
+	width:840px;margin-left: -20px;
+	border-bottom: 1px solid #CCC;
+	text-align:center;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	margin-top: 3px; font-size:15px; 
+}
+#menu a{
+	border: 1px  #DFDFDF solid;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	
+	text-decoration:none;
+	color: #001800;
+	margin-left:4px;
+}
+#menu a:hover{
+	border: 1px #CCC solid;
+	background:#F7F7F7;
+}
+#bottom{
+	padding: 10px;
+	width:800px;
+	text-align:left;
+	clear:left;
+	font-size:12px;
+    font-family: 'Open Sans Condensed', sans-serif;
+	color:#666;
+	margin-bottom: 20px;
+	}
+	#bottom1{
+width:40px;
+float: left;
+	}
+#bottom2{
+	width:760px;
+float: left;
+	}
+#bottom a{
+	color:#666;
+	}
+.pod{ 
+	font-size:12px;
+	color:#666;
+}
+.error{ 
+	font-size:12px;
+	color: #F00;
+}
+.suc{ 
+	background: #FDF8C6; 
+	border: #CCC solid 1px;
+	padding:5px;
+	width:95%; 
+}
+.bad{ 
+	background: #FFD5D5; 
+	border: #FF9595 solid 1px;
+	padding:5px;
+	width:98%; 
+}
+.biggest a{ font-size: 18px; color: #900; }
+
+.success-button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white !important;
+	padding: 25px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+}

@@ -5,13 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+
+    <div id="app1"></div>
+
     <div id="app">
         <div>
-            <!--{{ message }}
-            <button v-on:click="reverseMessage">Reverse Message</button>
-
-            <input v-model="message">-->
-
             <p>
                 <router-link to="/login">login</router-link>
                 <router-link to="/register">register</router-link>
@@ -25,8 +23,6 @@
                 <router-link to="/teams">teams</router-link>
                 <router-link to="/profile">profile</router-link>
             </p>
-
-            <!--<router-view></router-view>-->
 
             <transition>
                 <router-view></router-view>

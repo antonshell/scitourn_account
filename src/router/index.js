@@ -1,13 +1,24 @@
-import ForgetPassword from './../components/open/ForgetPassword.vue'
-import Login from './../components/open/Login.vue'
-import NotFound from './../components/open/NotFound.vue'
-import Register from './../components/open/Register.vue'
+/*var path = require('path');
 
-import Home from './../components/protected/Home.vue'
-import Dashboard from './../components/protected/Dashboard.vue'
-import Tournaments from './../components/protected/Tournaments.vue'
-import Teams from './../components/protected/Teams.vue'
-import Profile from './../components/protected/Profile.vue'
+var commonPath = path.resolve(__dirname, './../components/pages/');
+console.log(commonPath);
+
+var commonPath = '../components/pages/';
+var openPath = commonPath + 'open/';
+var protectedPath = commonPath + 'protected/';
+
+let ForgetPassword = require(openPath + "ForgetPassword.vue");*/
+
+import ForgetPassword from './../components/pages/open/ForgetPassword.vue'
+import Login from './../components/pages/open/Login.vue'
+import NotFound from './../components/pages/open/NotFound.vue'
+import Register from './../components/pages/open/Register.vue'
+
+import Home from './../components/pages/protected/Home.vue'
+import Dashboard from './../components/pages/protected/Dashboard.vue'
+import Tournaments from './../components/pages/protected/Tournaments.vue'
+import Teams from './../components/pages/protected/Teams.vue'
+import Profile from './../components/pages/protected/Profile.vue'
 
 import auth from './../auth'
 
