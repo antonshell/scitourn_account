@@ -15,7 +15,7 @@
 
 <script>
     export default {
-        name: 'header',
+        name: 'top',
         data () {
             return {
                 msg: 'Login'

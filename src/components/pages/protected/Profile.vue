@@ -9,16 +9,16 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Полное имя на<br>русском языке</td>
                     <td>
-                        <table id="nonet" style="vertical-align: middle;">
+                        <table id="nonet" class="profile-form-row">
                             <tbody>
                             <tr>
                                 <td>
-                                    <input  type="text" name="surname" style="width:120px" value="Шелыганов">
+                                    <input  type="text" name="surname" class="profile-input-120" value="Шелыганов">
                                 </td>
-                                <td><input type="text" name="name" style="width:90px" value="Антон"></td>
+                                <td><input type="text" name="name" class="profile-input-90" value="Антон"></td>
                                 <td><input type="text" name="secondname" value="Александрович"></td>
                             </tr>
                             <tr class="podskazka">
@@ -32,7 +32,7 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Полное имя на английском языке</td>
                     <td>
                         <table id="nonet">
@@ -53,7 +53,7 @@
 
                 <tr>
                     <td>Год рождения</td>
-                    <td><select style="width:100px;" name="ybirth">
+                    <td><select class="profile-input-100" name="ybirth">
                         <option value="1940">1940</option>
                         <option value="1941">1941</option>
                         <option value="1942">1942</option>
@@ -123,7 +123,7 @@
                     </select></td>
                 </tr>
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Место жительства</td>
                     <td>
                         <table id="nonet">
@@ -144,7 +144,7 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Статус</td>
                     <td>
                         <label><input class="target" type="radio" name="status" value="школьник">школьник</label>
@@ -155,16 +155,16 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Школа</td>
                     <td>
                         <table id="nonet">
                             <tbody>
                             <tr>
-                                <td><input type="text" style="width:250px;" id="school" name="school" value=""
-                                           class="ui-autocomplete-input" autocomplete="off"></td>
+                                <td><input type="text" id="school" name="school" value=""
+                                           class="ui-autocomplete-input profile-input-250" autocomplete="off"></td>
                                 <td>
-                                    <select style="width:100px;" name="endschool">
+                                    <select class="profile-input-100" name="endschool">
                                         <option value="">Not Set</option>
                                         <option value="1958">1958</option>
                                         <option value="1959">1959</option>
@@ -248,16 +248,16 @@
                 </tr>
 
 
-                <tr id="univ" style="vertical-align: top;">
+                <tr id="univ" class="profile-form-row-top">
                     <td><p>ВУЗ</p></td>
                     <td>
                         <table id="nonet">
                             <tbody>
                             <tr>
-                                <td><input type="text" style="width:250px;" id="univer" name="univ" value="СПБГУАП"
-                                           class="ui-autocomplete-input" autocomplete="off"></td>
+                                <td><input type="text" id="univer" name="univ" value="СПБГУАП"
+                                           class="ui-autocomplete-input profile-input-250" autocomplete="off"></td>
                                 <td>
-                                    <select style="width:100px;" name="enduniv">
+                                    <select class="profile-input-100" name="enduniv">
                                         <option value="">Not Set</option>
                                         <option value="1958">1958</option>
                                         <option value="1959">1959</option>
@@ -337,7 +337,7 @@
                             </tr>
 
                             <tr>
-                                <td><input type="text" style="width:250px;" id="univer" name="univ_en" value=""></td>
+                                <td><input type="text" class="profile-input-250" id="univer" name="univ_en" value=""></td>
                                 <td></td>
                             </tr>
                             <tr class="podskazka">
@@ -350,12 +350,12 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>E-mail</td>
                     <td>antonshell@yandex.ru</td>
                 </tr>
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Вход через ВКонтакте</td>
                     <td>
                         <a href="https://loginza.ru/api/widget?token_url=http%3A%2F%2Fscitourn.ru%2Faccount%2Faddvk.php&amp;provider=vkontakte"
@@ -363,28 +363,32 @@
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
+                <tr class="profile-form-row">
                     <td>Номер телефона</td>
                     <td><input style="width:250px" type="text" name="phone" value=""></td>
                 </tr>
 
 
-                <tr style="vertical-align: middle;">
-                    <td style="vertical-align: top; padding-top:9px;">Комментарий<br><span
-                            class="podskazka">не обязательно</span></td>
-                    <td><textarea id="textarea" name="comment" style="width:350px; height:25px;"></textarea></td>
+                <tr class="profile-form-row">
+                    <td class="profile-comment-label">
+                        Комментарий<br>
+                        <span class="podskazka">не обязательно</span>
+                    </td>
+                    <td>
+                        <textarea id="textarea" name="comment" class="profile-comment-input"></textarea>
+                    </td>
                 </tr>
 
-                <tr style="vertical-align: middle;">
-                    <td style="vertical-align: middle;">Новый пароль</td>
+                <tr class="profile-form-row">
+                    <td class="profile-form-row">Новый пароль</td>
                     <td>
                         <table id="nonet">
                             <tbody>
                             <tr>
 
-                                <td><input type="password" style="width:120px" name="oldpassword" value=""></td>
-                                <td><input type="password" style="width:120px" name="password" value=""></td>
-                                <td><input type="password" style="width:120px" name="repassword" value=""></td>
+                                <td><input type="password" class="profile-input-120" name="oldpassword" value=""></td>
+                                <td><input type="password" class="profile-input-120" name="password" value=""></td>
+                                <td><input type="password" class="profile-input-120" name="repassword" value=""></td>
                             </tr>
                             <tr class="podskazka">
                                 <td>Старый пароль</td>

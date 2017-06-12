@@ -7,11 +7,11 @@
 
         <!--Tournament item-->
         <p>
-            <a href="/account/tourns.php?id=28" style="margin-bottom:5px;">
+            <a href="/account/tourns.php?id=28" class="tourn-link">
                 II Приморский химический турнир школьников
             </a>
             <br>
-            <span style="color:gray; font-size:14px;">
+            <span class="tourn-description">
                                         Заочный этап: 13 февраля - 13 марта 2017 года
                                         Очный этап: 24 марта 2017 года
                                         Проводится при поддержке ВХТШ на базе Дальневосточного федерального университета.
@@ -19,8 +19,7 @@
                                     </span>
             <br>
             <a href="/account/team.php?id=755">
-                <input type="button" style="margin-top:5px; margin-left:-3px;"
-                       class="activebuttn" value="Моя команда">
+                <input type="button" class="activebuttn tourn-action" value="Моя команда">
             </a>
         </p>
         <p></p>
@@ -28,15 +27,14 @@
 
         <!--Tournament item-->
         <p>
-            <a href="/account/tourns.php?id=30" style="margin-bottom:5px;">
+            <a href="/account/tourns.php?id=30" class="tourn-link">
                 VIII Международный турнир естественных наук
             </a>
             <br>
-            <span style="color:gray; font-size:14px;"></span>
+            <span class="tourn-description"></span>
             <br>
             <a href="/account/team.php?id=756">
-                <input type="button" style="margin-top:5px; margin-left:-3px;"
-                       class="activebuttn" value="Моя команда"></a>
+                <input type="button" class="activebuttn tourn-action" value="Моя команда"></a>
         </p>
         <p></p>
 
@@ -45,12 +43,12 @@
 
         <!--Tournament item-->
         <p>
-            <a href="/account/tourns.php?id=20" style="margin-bottom:5px;">
+            <a href="/account/tourns.php?id=20" class="tourn-link">
                 VII Международный турнир
                 естественных наук, 2016, Санкт-Петербург (Русскоязычная лига)
             </a>
             <br>
-            <span style="color:gray; font-size:14px;">
+            <span class="tourn-description">
                                         Ноябрь 2016, Санкт-Петербург.
                                     </span>
             <br>
@@ -61,18 +59,17 @@
 
         <!--Tournament item-->
         <p>
-            <a href="/account/tourns.php?id=16" style="margin-bottom:5px;">
+            <a href="/account/tourns.php?id=16" class="tourn-link">
                 Екатеринбург. II Городской
                 химический турнир школьников, 2015-2016 уч. год
             </a>
             <br>
-            <span style="color:gray; font-size:14px;">
+            <span class="tourn-description">
                                     Екатеринбург. II Городской химический турнир школьников, 2015-2016 уч. год
                                 </span>
             <br>
             <a href="/account/team.php?id=122">
-                <input type="button" style="margin-top:5px; margin-left:-3px;"
-                       class="buttonuse" value="Моя команда">
+                <input type="button" class="buttonuse tourn-action" value="Моя команда">
             </a>
         </p>
         <p></p>
@@ -81,16 +78,15 @@
 
         <!-- Tournament Item -->
         <p>
-            <a href="/account/tourns.php?id=8" style="margin-bottom:5px;">
+            <a href="/account/tourns.php?id=8" class="tourn-link">
                 XI Всероссийский химический
                 турнир школьников 2015
             </a>
             <br>
-            <span style="color:gray; font-size:14px;">13-16 марта 2015 года, Санкт-Петербург</span>
+            <span class="tourn-description">13-16 марта 2015 года, Санкт-Петербург</span>
             <br>
             <a href="/account/tourns.php?id=8&part#part">
-                <input type="button" style="margin-top:5px; margin-left:-3px;"
-                       class="buttonuse" value="Я участвовал(а) в этом турнире">
+                <input type="button" class="buttonuse tourn-action" value="Я участвовал(а) в этом турнире">
             </a>
         </p>
         <p></p>

@@ -3,7 +3,7 @@
 
         <center>
 
-            <Header></Header>
+            <Top></Top>
 
             <br>
 
@@ -29,10 +29,6 @@
 
                                 </td>
 
-
-
-
-
                                 <td width="220px">
                                     <Sidebar></Sidebar>
                                 </td>
@@ -45,7 +41,7 @@
                 <Banners></Banners>
             </div>
 
-            <Footer></Footer>
+            <Bottom></Bottom>
 
         </center>
 
@@ -81,8 +77,8 @@
 
 
     import Banners from './Banners.vue';
-    import Footer from './Footer.vue';
-    import Header from './Header.vue';
+    import Bottom from './Bottom.vue';
+    import Top from './Top.vue';
     import Sidebar from './Sidebar.vue';
 
     export default {
@@ -93,6 +89,6 @@
             }
         },
         //router,
-        components: { Footer, Banners, Header, Sidebar }
+        components: { Bottom, Banners, Top, Sidebar }
     }
 </script>

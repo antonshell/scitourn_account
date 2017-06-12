@@ -29,3 +29,59 @@
     width: 150px;
     padding: 5px;
 }
+
+/* teams*/
+.team-description{
+    color:gray; font-size:13px;
+}
+
+/* tourns */
+.tourn-link{
+    margin-bottom:5px;
+}
+
+.tourn-description{
+    color:gray;
+    font-size:14px;
+}
+
+.tourn-action{
+    margin-top:5px;
+    margin-left:-3px;
+}
+
+/* profile */
+.profile-form-row{
+    vertical-align: middle;
+}
+
+.profile-form-row-top{
+    vertical-align: top;
+}
+
+.profile-comment-label{
+    vertical-align: top;
+    padding-top:9px;
+}
+
+.profile-comment-input{
+    width:350px;
+    height:25px;
+}
+
+.profile-input-90{
+    width: 90px;
+}
+
+.profile-input-100{
+    width: 100px;
+}
+
+.profile-input-120{
+    width: 120px;
+}
+
+.profile-input-250{
+    width: 250px;
+}
+
