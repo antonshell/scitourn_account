@@ -59,6 +59,8 @@ const routes = [
     { path: '/tournaments', component: Tournaments, beforeEnter: requireAuth },
     { path: '/teams', component: Teams, beforeEnter: requireAuth },
     { path: '/profile', component: Profile, beforeEnter: requireAuth },
+
+    { path: "*", component: NotFound }
 ];
 
 const router = new VueRouter({
